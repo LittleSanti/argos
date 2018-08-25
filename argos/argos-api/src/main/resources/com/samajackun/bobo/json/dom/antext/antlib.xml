@@ -1,0 +1,3 @@
+<antlib>
+	<taskdef name="convert-json-to-xml" classname="com.samajackun.bobo.json.dom.antext.DomConverterTask"/>
+</antlib>

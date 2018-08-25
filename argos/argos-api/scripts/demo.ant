@@ -1,0 +1,24 @@
+<project name="bobo-demo">
+	<taskdef resource="com/samajackun/bobo/json/dom/antext/antlib.xml">
+		<classpath>
+			<pathelement location="../target/classes" />
+		</classpath>
+	</taskdef>
+	<target name="demo-convert-one-file">
+		<convert-json-to-xml input="x1.json" output="x1.xml">
+		</convert-json-to-xml>
+	</target>
+	<target name="demo-convert-fileset">
+		<convert-json-to-xml outputEncoding="UTF-16" basedir=".">
+			<include name="*.json" />
+			<mapper type="regexp" from="x([0-9]).json" to="y\1.xml" />
+		</convert-json-to-xml>
+	</target>
+	<target name="demo-convert-one-file-with-preferences">
+		<convert-json-to-xml input="x1.json" output="x1.xml" overwrite="true">
+			<rootnamespace key="ns1" uri="uri1" />
+			<rootnamespace key="ns2" uri="uri2" />
+			<xslheader href="my.xsl" />
+		</convert-json-to-xml>
+	</target>
+</project>

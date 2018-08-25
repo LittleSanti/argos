@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.samajackun.argos</groupId>
+	<artifactId>argos-api</artifactId>
+	<name>Argos API</name>
+	<parent>
+		<groupId>com.samajackun.argos</groupId>
+		<artifactId>argos</artifactId>
+		<version>0.1.0-SNAPSHOT</version>
+	</parent>
+	<description>Json parser, serializer and DOM adaptor</description>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.ant</groupId>
+			<artifactId>ant</artifactId>
+			<version>1.9.2</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.0</version>
+				<configuration>
+					<skip>false</skip>
+					<redirectTestOutputToFile>true</redirectTestOutputToFile>
+					<systemPropertyVariables>
+					</systemPropertyVariables>
+					<configuration>
+						<excludes>
+							<exclude>com/samajackun/argos/json/parser/ClientTest.java</exclude>
+						</excludes>
+					</configuration>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

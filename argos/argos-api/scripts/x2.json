@@ -1,0 +1,12 @@
+{
+	"meses": [
+		"enero",
+		"febrero",
+		"marzo"
+	],
+	"dia": "lunes",
+	"libro": {
+		"autor": "becqer",
+		"titulo":"rimas y leyendas" 
+	}
+}
